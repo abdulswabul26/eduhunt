@@ -117,7 +117,32 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: 40px;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey;  */
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--blue); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--lightblue); 
+  }
+
+
 
 #main-section .greetings {
     width: 100%;
@@ -170,12 +195,12 @@ nav ul li a{
     border-radius: 15px;
     background-color: var(--lightblue);
     color: var(--blue);
-    padding: 10px;
+    padding: 20px 30px 20px 30px;
     margin: 0px 0px 10px 0px;
 }
 .main-get-premuim-title{
-    font-size: 1.2rem;
-    margin: 0px 0px 5px 0px;
+    font-size: 2rem;
+    margin: 0px 0px 10px 0px;
     font-weight: 700;
     color: var(--blue);
     letter-spacing: 3px;
@@ -235,18 +260,19 @@ nav ul li a{
     pointer-events: none;
     border-radius: 20px;
     padding: 10px;
-    background-color: var(--lightblue);
     display: flex;
     flex-direction: column;
 }
 .overview-tab :nth-child(2){
     font-size: .8em;
     align-self: center;
+    color: var(--black);
+
 }
 .overview-tab :nth-child(1){
     font-size: 2.5em;
     font-weight: 700;
-    color: var(--blue);
+    color: var(--black);
     align-self: center;
     padding: 0px 10px;
 }
@@ -301,6 +327,7 @@ nav ul li a{
     height: 100px;
     margin: 0px 10px 0px 0px;
     border-radius: 15px;
+    object-fit: cover;
 }
 .learning-tab .learning-tab-info{
     width: 50%;
@@ -354,4 +381,159 @@ nav ul li a{
     padding: 3px 9px;
     border-radius: 20px;
     margin: 0 0 0 10px;
+}
+
+
+
+
+aside{
+    width: 20%;
+}
+#account{
+    padding: 10px 20px 10px 10px;
+    width: 100%;
+    overflow: hidden;
+    height: max-content;
+    display: flex;
+    justify-content: flex-end;
+    /* border-bottom: 1px solid #c7c5c5; */
+}
+#account .username{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#account .username p{
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+#account .user-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #c7c5c5;
+    padding: 5px;
+    margin: 0px 0px 0px 10px;
+}
+#account .user-image img{
+    width: 100%;
+}
+
+#reminders{
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0px 0px 0px;
+    height: max-content;
+}
+#reminders .reminder-title{
+    color: var(--blue);
+    font-weight: 600;
+    margin: 0px 0px 10px 0px;
+}
+#reminders .remind-tab {
+    width: 100%;
+    background-color: var(--lightblue);
+    padding: 10px 10px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    margin: 0px 0px 10px 0px;
+}
+
+.remind-info-p1{
+    font-weight: 500;
+    font-size: .8rem;
+}
+.remind-info-p2{
+    font-size: .6rem;
+}
+.remind-time{
+    font-size: .8rem;
+    border-radius: 10px;
+    background-color: var(--blue);
+    padding: 5px 10px;
+    color: var(--white);
+}
+#events {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    height: max-content;
+}
+.events-title{
+    color: var(--blue);
+    font-weight: 600;
+    margin: 0px 0px 10px 0px;
+}
+.event-tab {
+    width: 100%;
+    background-color: var(--lightblue);
+    padding: 10px 10px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 15px;
+    margin: 0px 0px 10px 0px;
+}
+.event-tab .event-title{
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.event-tab .event-host{
+    font-size: .5rem;
+    color: #555555;
+}
+.event-tab .event-info{
+    font-size: .6rem;
+    font-weight: 500;
+}
+.event-tab .event-profiles {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: relative;
+    margin: 5px 0px 5px 0px;
+}
+.event-tab .profile {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    border: .2px solid var(--white);
+}
+.event-tab .profile img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.prfl1{
+    margin: 0px 0px 0px 0px;
+}
+.prfl2{
+    margin: 0px 0px 0px 15px;
+}
+.prfl3{
+    margin: 0px 0px 0px 35px;
+}
+.prfl4{
+    margin: 0px 0px 0px 55px;
+}
+.event-tab .schedule{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    font-size: .55rem;
+}
+.event-tab .schedule p{
+    padding: 0px 3px;
+}
+.event-tab .schedule p:nth-child(2){
+    border-left: 1px solid #3f3f3f;
+    border-right: 1px solid #3f3f3f;
 }
