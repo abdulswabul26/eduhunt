@@ -4,6 +4,8 @@
 
 This project is a fully responsive dashboard built exclusively with HTML and CSS, showcasing a sleek, modern design optimized for various screen sizes. The dashboard offers a clean and intuitive user interface, providing a seamless user experience across desktops, tablets, and mobile devices.
 
+<a href="https://abdulswabul26.github.io/eduhunt/" text-align="center">Preview</a>
+
 ### Features
 
 1. **Responsive Layout**:
